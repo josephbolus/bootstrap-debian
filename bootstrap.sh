@@ -4,7 +4,6 @@ echo "The process will need your sudo password"
 echo "Updating repositories"
 apt-get -y update
 echo "Updating Packages"
-apt-get upgrade
 apt-get dist-upgrade
 
 # Install Required Packages
