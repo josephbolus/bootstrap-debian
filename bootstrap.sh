@@ -37,6 +37,7 @@ cp /home/`whoami`/bootstrap/conf/vimrc /home/`whoami`/.vim/janus/vim/vimrc
 echo "Configuring i3"
 cp /home/`whoami`/bootstrap/conf/i3/config /home/`whoami`/.i3/config
 cp /home/`whoami`/bootstrap/conf/i3/startup.sh /home/`whoami`/.i3/startup.sh
+cp /home/`whoami`/bootstrap/cong/i3/create_next_workspace.rb /home/`whoami`/.i3/create_next_workspace.rb
 
 echo "Adding Xdefaults"
 cp /home/`whoami`/bootstrap/conf/Xdefaults /home/`whoami`/.Xdefaults
