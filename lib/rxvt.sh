@@ -1,3 +1,3 @@
 # Configuring RXVT
 echo "Adding Xdefaults"
-cp $HOME/bootstrap/conf/Xdefaults $HOME/.Xdefaults
+cp $HOME/bootstrap-debian/conf/Xdefaults $HOME/.Xdefaults

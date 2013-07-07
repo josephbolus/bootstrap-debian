@@ -5,4 +5,4 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle; \
       https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 mv $HOME/.vim/janus/vim/vimrc $HOME/vimrc.oldz
-cp $HOME/bootstrap/conf/vimrc $HOME/.vim/janus/vim/vimrc
+cp $HOME/bootstrap-debian/conf/vimrc $HOME/.vim/janus/vim/vimrc
