@@ -1,42 +1,20 @@
 echo "Bootstraping Debian 7 workstation"
 echo "The process will need your sudo password"
 
-echo "Updating repositories"
-apt-get -y update
-echo "Updating Packages"
-apt-get dist-upgrade
+# Install packages
+lib/packages.sh
 
-# Install Required Packages
-echo "Installing sexy stuff"
-apt-get install curl build-essential gcc vim i3 rxvt-unicode-256color git htop
+# Install Ruby
+lib/ruby.sh
 
-# Install RVM
-echo "Installing RVM"
-\curl -L https://get.rvm.io | bash
-
-# Install Ruby 1.9.3-p327 with falcon patch
-echo "Installing Ruby 1.9.3-p327 with falcon patch"
-rvm install 1.9.3-p327 --patch falcon --force-autoconf -j 5
-rvm use 1.9.3-p327 --default
-
-# Installing Rails 3.2.13
-echo "Installing Rails 3.2.13"
-gem install rails --version 3.2.13 --no-ri --no-rdoc
+# Install Rails
+lib/rails.sh
 
 # Configuring VIM
-echo "Configuring vim"
-mkdir -p ~/.vim/autoload ~/.vim/bundle; \
-  curl -Sso ~/.vim/autoload/pathogen.vim \
-      https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-
-mv $HOME/.vim/janus/vim/vimrc $HOME/vimrc.oldz
-cp $HOME/bootstrap/conf/vimrc $HOME/.vim/janus/vim/vimrc
+lib/vim.sh
 
 # Configuring i3
-echo "Configuring i3"
-cp $HOME/bootstrap/conf/i3/config $HOME/.i3/config
-cp $HOME/bootstrap/conf/i3/startup.sh $HOME/.i3/startup.sh
-cp $HOME/bootstrap/cong/i3/create_next_workspace.rb $HOME/.i3/create_next_workspace.rb
+lib/i3.sh
 
-echo "Adding Xdefaults"
-cp $HOME/bootstrap/conf/Xdefaults $HOME/.Xdefaults
+# Configuring RXVT
+lib/rxvt.sh
