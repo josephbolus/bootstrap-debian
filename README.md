@@ -1,4 +1,4 @@
-# Boostraping my Debian 7 Wheezy
+# Bootstraping my Debian 7 Wheezy
 
 This is an opinionated script that boostraps my Debian 7 wheezy
 installation.
