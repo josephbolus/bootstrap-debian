@@ -29,14 +29,14 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle; \
   curl -Sso ~/.vim/autoload/pathogen.vim \
       https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
-mv /home/`whoami`/.vim/janus/vim/vimrc /home/`whoami`/vimrc.oldz
-cp /home/`whoami`/bootstrap/conf/vimrc /home/`whoami`/.vim/janus/vim/vimrc
+mv $HOME/.vim/janus/vim/vimrc $HOME/vimrc.oldz
+cp $HOME/bootstrap/conf/vimrc $HOME/.vim/janus/vim/vimrc
 
 # Configuring i3
 echo "Configuring i3"
-cp /home/`whoami`/bootstrap/conf/i3/config /home/`whoami`/.i3/config
-cp /home/`whoami`/bootstrap/conf/i3/startup.sh /home/`whoami`/.i3/startup.sh
-cp /home/`whoami`/bootstrap/cong/i3/create_next_workspace.rb /home/`whoami`/.i3/create_next_workspace.rb
+cp $HOME/bootstrap/conf/i3/config $HOME/.i3/config
+cp $HOME/bootstrap/conf/i3/startup.sh $HOME/.i3/startup.sh
+cp $HOME/bootstrap/cong/i3/create_next_workspace.rb $HOME/.i3/create_next_workspace.rb
 
 echo "Adding Xdefaults"
-cp /home/`whoami`/bootstrap/conf/Xdefaults /home/`whoami`/.Xdefaults
+cp $HOME/bootstrap/conf/Xdefaults $HOME/.Xdefaults
